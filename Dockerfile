@@ -24,6 +24,9 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 #new entrypoint
 COPY entrypoint.sh /usr/local/bin/
 
+#default xdebug config
+COPY xdebug.ini /usr/local/etc/php/conf.d/
+
 RUN chmod 777 /usr/local/bin/entrypoint.sh
 
 ENTRYPOINT ["/usr/local/bin/entrypoint.sh"]
