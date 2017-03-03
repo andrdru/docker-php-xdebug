@@ -1,0 +1,27 @@
+version: '2'
+services:
+    web:
+        image: nginx:latest
+        restart: always
+        ports:
+            - "80:80"
+        networks:
+            - code-network
+        depends_on:
+          - "php"
+        volumes:
+          - ./src:/src
+
+    php:
+        #image: andrdru/php-fpm #basic docker image
+        image: andrdru/php-fpm-xdebug
+        restart: always
+        volumes:
+          - ./src:/src
+          #- ./../xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini #user-defined xdebug settings
+        networks:
+            - code-network
+
+networks:
+    code-network:
+        driver: bridge
