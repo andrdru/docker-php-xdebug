@@ -26,6 +26,7 @@ COPY entrypoint.sh /usr/local/bin/
 
 #default xdebug config
 COPY xdebug.ini /usr/local/etc/php/conf.d/
+RUN chmod 777 /usr/local/etc/php/conf.d/xdebug.ini
 
 RUN chmod 777 /usr/local/bin/entrypoint.sh
 
