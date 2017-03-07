@@ -11,6 +11,7 @@ services:
           - "php"
         volumes:
           - ./src:/src
+          - ./nginx/site.conf:/etc/nginx/conf.d/site.conf
 
     php:
         #image: andrdru/php-fpm #basic docker image
@@ -18,7 +19,7 @@ services:
         restart: always
         volumes:
           - ./src:/src
-          #- ./../xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini #user-defined xdebug settings
+          #- ./../xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini #use custom xdebug settings
         networks:
             - code-network
 
