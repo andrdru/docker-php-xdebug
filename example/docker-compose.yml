@@ -19,7 +19,7 @@ services:
         restart: always
         volumes:
           - ./src:/src
-          #- ./../xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini #use custom xdebug settings
+          #- ./../xdebug.ini:/usr/local/etc/php/conf.d/xdebug.ini #uncomment to use custom xdebug settings
         networks:
             - code-network
 
