@@ -12,7 +12,7 @@ Warning! Use this image for development only
 
 ## Description
 
-On Windows Docker creates DockerNAT virtual net(10.0.75.0 by default), where host machine on 10.0.75.1 and Docker continers on 10.0.75.2
+On Windows Docker creates DockerNAT virtual net(10.0.75.0 by default), where host machine on 10.0.75.1 and Docker containers on 10.0.75.2
 
 ## Usage
 
@@ -28,4 +28,4 @@ For PhpStorm:
 - File->Settings PHP->Debug Xdebug Debug port 9001
 - Run->Start listening for PHP Debug Connections
 
-Open http://site.local in brower. Now you can debug PHP locally using xDebug on Docker.
+Open http://site.local in browser. Now you can debug PHP locally using xDebug on Docker.
