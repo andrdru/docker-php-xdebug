@@ -18,6 +18,9 @@ RUN	cd xdebug && phpize && ./configure --enable-xdebug && make -j$(nproc) && mak
 RUN rm -r xdebug \
     && docker-php-ext-enable xdebug
 
+#install composer
+RUN apt-get install composer -y
+
 #cleanup
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
