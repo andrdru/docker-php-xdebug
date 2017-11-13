@@ -7,7 +7,7 @@ RUN apt-get update
 RUN apt-get install php-dev -y
 
 # Install Xdebug
-RUN curl -fsSL 'https://xdebug.org/files/xdebug-2.5.1.tgz' -o xdebug.tar.gz
+RUN curl -fsSL 'https://xdebug.org/files/xdebug-2.5.5.tgz' -o xdebug.tar.gz
 RUN ls
 RUN mkdir -p xdebug
 RUN tar -xf xdebug.tar.gz -C xdebug --strip-components=1
